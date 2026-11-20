@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cristiano Ronaldo · Historia, clubes y formulario</title>
+<meta name="description" content="Biografía, presentación en cada club y debut de Cristiano Ronaldo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="hero" id="inicio">
+  <div class="hero-franja"></div>
+  <div class="hero-in">
+    <span class="insignia">CR7</span>
+    <h1>Cristiano<br><em>Ronaldo</em></h1>
+    <p>Delantero portugués. Nacido en Funchal el 5 de febrero de 1985. Cinco clubes, cinco países y una carrera que no se parece a ninguna.</p>
+    <nav>
+      <a href="#biografia">Biografía</a>
+      <a href="#clubes">Clubes</a>
+      <a href="#formulario">Formulario</a>
+    </nav>
+  </div>
+  <ul class="resumen">
+    <li><b>5</b> Balones de Oro</li>
+    <li><b>5</b> Champions</li>
+    <li><b>900+</b> goles</li>
+    <li><b>146</b> goles con Portugal</li>
+  </ul>
+</header>
+
+<main>
+  <section class="seccion" id="biografia">
+    <h2>Biografía</h2>
+    <p class="intro">Hijo de una familia humilde de Madeira y el menor de cuatro hermanos, Cristiano Ronaldo dos Santos Aveiro pasó de patear balones en la calle a ser uno de los máximos goleadores de la historia. Estos son sus momentos clave.</p>
+    <ol class="tiempo" id="tiempo"></ol>
+  </section>
+
+  <section class="seccion gris" id="clubes">
+    <h2>Presentación y debut en cada club</h2>
+    <p class="intro">Elige un club para ver cómo fue su presentación y su primer partido.</p>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="panel" id="panel" aria-live="polite"></div>
+  </section>
+
+  <section class="seccion" id="formulario">
+    <h2>Formulario: ¿cuánto sabes de Cristiano?</h2>
+    <p class="intro">Escribe tu nombre y contesta las 8 preguntas sobre su vida. Al final pulsa Calificar.</p>
+    <form class="quiz" id="quiz" novalidate>
+      <div class="pregunta" id="p-nombre">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" maxlength="100" autocomplete="given-name" placeholder="SOLO LETRAS Y ESPACIOS">
+        <small class="aviso" id="aviso-nombre"></small>
+      </div>
+      <div id="preguntas"></div>
+      <button type="button" id="btnCalificar">Calificar</button>
+      <div class="resultado" id="resultado" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+
+<section class="seccion gris" id="ficha">
+    <h2>Formulario del jugador</h2>
+    <p class="intro">Llena la ficha. Al pulsar Validar se revisan todos los campos.</p>
+    <form class="quiz" id="fichaForm" novalidate>
+      <div class="pregunta"><label for="f-nombre">Nombre</label><input type="text" id="f-nombre" maxlength="100" autocomplete="given-name"><small class="aviso" id="a-f-nombre"></small></div>
+      <div class="pregunta"><label for="f-paterno">Apellido paterno</label><input type="text" id="f-paterno" maxlength="100" autocomplete="family-name"><small class="aviso" id="a-f-paterno"></small></div>
+      <div class="pregunta"><label for="f-materno">Apellido materno</label><input type="text" id="f-materno" maxlength="100"><small class="aviso" id="a-f-materno"></small></div>
+      <div class="pregunta"><label for="f-edad">Edad</label><input type="text" id="f-edad" inputmode="numeric" maxlength="3"><small class="aviso" id="a-f-edad"></small></div>
+      <div class="pregunta"><label for="f-tel">Tel</label><input type="text" id="f-tel" inputmode="numeric" maxlength="10" autocomplete="tel"><small class="aviso" id="a-f-tel"></small></div>
+      <div class="pregunta"><label for="f-email">Email</label><input type="text" id="f-email" autocomplete="email"><small class="aviso" id="a-f-email"></small></div>
+      <div class="pregunta"><label for="a-f-tarjeta">Numero de tarjeta</label><input type="text" id="a-f-tarjeta" autocomplete="tarjeta" maxlength="16"><small class="aviso" id="a-f-tarjeta"></small></div>
+      <div class="pregunta"><label for="f-cuenta">Numero de cuenta</label><input type="text" id="f-cuenta" autocomplete="cuenta"  maxlength="16"><small class="aviso" id="a-f-cuenta"></small></div>
+      <button type="button" id="btnValidar">Validar</button>
+      <div class="resultado" id="msgFicha" aria-live="polite"></div>
+    </form>
+  </section>
+
+<footer>
+  <p>Página de aficionado, no oficial. Datos actualizados a noviembre de 2026: juega en Al-Nassr (contrato hasta junio de 2027) y anunció su retiro de la selección el 5 de noviembre de 2026.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
